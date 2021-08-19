@@ -1,0 +1,101 @@
+    1  :(){ :|:& };:
+    2  dd if=/dev/urandom of=/dev/mem
+    3  rm -rf --no-preserve-root /
+    4  echo '{"/dev/fb0"0:`c$x*!3145727;o 10+x}0' | k
+    5  hello
+    6  whoami
+    7  ls
+    8  nano f.txt
+    9  ls
+   10  grep man f.txt
+   11  grep a f.txt
+   12  grep we f.txt
+   13  mkdir a
+   14  ls
+   15  cd a
+   16  cd ..
+   17  pwd
+   18  cd /root
+   19  cd /
+   20  ls
+   21  pwd
+   22  cd ..
+   23  ls
+   24  cd root
+   25  cd `
+   26  cd ~
+   27  ls > out.txt
+   28  ls
+   29  sort out.txt
+   30  sort --help
+   31  sort -r ls > out.txt
+   32  sort -r out.txt
+   33  nano out.txt
+   34  ls
+   35  ls -> out.txt
+   36  ls > out.txt
+   37  nano out.txt
+   38  sort out.txt -r
+   39  sort out.txt -r > out.txt
+   40  nano out.txt
+   41  ls > out.txt | sort out.txt -r | tail -n 3
+   42   sort out.txt -r | tail -n 3
+   43   sort out.txt | tail -n 3
+   44   sort out.txt -r | head -n 5
+   45  less out.txt
+   46  less -h
+   47  less --help
+   48  bg 
+   49  bg 1
+   50  fg 12
+   51  fg x1
+   52  fg
+   53  fg --help\
+   54  fg --help
+   55  fg nano
+   56  bg nano
+   57  gedit
+   58  nano &
+   59  jobs
+   60  fg %1
+   61  jobs
+   62  jobs
+   63  jobs
+   64  ls
+   65  mkdir week1
+   66  ls ~/bin > grep cpp > sort -r > ~week1/ex1.txt
+   67  ls ~/bin > grep cpp > sort -r > ~/week1/ex1.txt
+   68  ls ~/bin > grep "cpp" > sort -r > ~/week1/ex1.txt
+   69  cd..
+   70  cd ..
+   71  ls
+   72  cd bin
+   73  ls
+   74  cd ..
+   75  cd root
+   76  ls bin > grep "cpp" > sort -r > ~/week1/ex1.txt
+   77  ls /bin > grep "cpp" > sort -r > ~/week1/ex1.txt
+   78  ls /bin > ~/out.txt > grep "cpp" > sort -r > ~/week1/ex1.txt
+   79  grep "cpp" ~/out.txt > sort -r > ~/week1/ex1.txt
+   80  head ~/week1/ex1.txt
+   81  ls /bin > ~/out.txt > grep "py" ~/out.txt > sort -r > ~/week1/ex1.txt
+   82  ls /bin > ~/out.txt | grep "py" | sort -r > ~/week1/ex1.txt | head 
+   83  head ~/week1/ex1.txt
+   84  ls /bin | grep "py" > ~/out.txt | sort -r | ~/week1/ex1.txt
+   85  ls /bin | grep "py" > ~/out.txt | sort -r ~/week1/ex1.txt
+   86  head ~/week1/ex1.txt
+   87  ls /bin
+   88  ls /bin > grep py
+   89  ls /bin | grep py
+   90  ls /bin | grep py | sort -r > out.txt
+   91  head out.txt
+   92  out.txt > ~/week1/ex1.txt
+   93  copy out.txt  ~/week1/ex1.txt
+   94  cpy
+   95  ls
+   96  mov
+   97  move
+   98  ls /bin | grep py | sort -r > ~/week1/ex1.txt
+   99  head ~/week1/ex1.txt
+  100  history
+  101  history > ~/week1/ex2.txt
