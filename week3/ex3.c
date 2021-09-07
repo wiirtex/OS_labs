@@ -1,17 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node {
+struct node
+{
     int data;
     struct node* next_node;
 } typedef node;
 
-struct linked_list {
+struct linked_list
+{
     node* head;
 } typedef linked_list;
 
-int init(linked_list* a) {
-    if (a == NULL) {
+int init(linked_list* a)
+{
+    if (a == NULL)
+    {
         return 1;
     }
     a->head = (node*)malloc(sizeof(node));
@@ -22,7 +26,8 @@ int init(linked_list* a) {
 
 int print(linked_list* a)
 {
-    if (a == NULL || a->head == NULL) {
+    if (a == NULL || a->head == NULL)
+    {
         return 1;
     }
     node* now = a->head->next_node;
@@ -39,26 +44,41 @@ int print(linked_list* a)
     return 0;
 }
 
-int insert_node(linked_list* a, int n)
+int insert_node(linked_list* a, int pos, int n)
 {
-    if (a == NULL || a->head == NULL) {
+    if (a == NULL || a->head == NULL)
+    {
         return 1;
     }
     node* now = a->head;
-    while (1) {
-        if (now->next_node == NULL) {
-            now->next_node = (node*)malloc(sizeof(node));
-            now->next_node->data = n;
-            now->next_node->next_node = NULL;
+    int i = 0;
+    while (1)
+    {
+        if (now->next_node == NULL)
+        {
+            node* add = (node*)malloc(sizeof(node));
+            add->data = n;
+            add->next_node = now->next_node;
+            now->next_node = add;
+            return 0;
+        }
+        if (i == pos)
+        {
+            node* add = (node*)malloc(sizeof(node));
+            add->data = n;
+            add->next_node = now->next_node;
+            now->next_node = add;
             return 0;
         }
         now = now->next_node;
+        i++;
     }
 }
 
 int delete_node(linked_list* a, int n)
 {
-    if (a == NULL || a->head == NULL) {
+    if (a == NULL || a->head == NULL)
+    {
         return 1;
     }
     node* now = a->head;
@@ -70,9 +90,15 @@ int delete_node(linked_list* a, int n)
         }
         if (now->next_node->data == n && now->next_node->next_node != NULL)
         {
-            node * c = now->next_node->next_node;
+            node* c = now->next_node->next_node;
             free(now->next_node);
             now->next_node = c;
+            return 0;
+        }
+        if (now->next_node->data == n && now->next_node->next_node == NULL)
+        {
+            free(now->next_node);
+            now->next_node = NULL;
             return 0;
         }
         now = now->next_node;
@@ -85,9 +111,9 @@ int main()
     linked_list a;
     init(&a);
     print(&a);
-    insert_node(&a, 2);
+    insert_node(&a, 0, 2);
     print(&a);
-    insert_node(&a, 1);
+    insert_node(&a, 0, 1);
     print(&a);
     delete_node(&a, 1000);
     print(&a);
@@ -96,4 +122,5 @@ int main()
     delete_node(&a, 2);
     print(&a);
 }
+
 
