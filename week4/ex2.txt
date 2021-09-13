@@ -1,0 +1,150 @@
+systemd-+-accounts-daemon---2*[{accounts-daemon}]
+        |-2*[agetty]
+        |-atd
+        |-cron
+        |-dbus-daemon
+        |-f2b/server---10*[{f2b/server}]
+        |-irqbalance---{irqbalance}
+        |-2*[iscsid]
+        |-linkdir---7*[{linkdir}]
+        |-lua5.2
+        |-master-+-pickup
+        |        `-qmgr
+        |-networkd-dispat
+        |-nginx---2*[nginx]
+        |-postgres---7*[postgres]
+        |-python3
+        |-rpcbind
+        |-rsyslogd---3*[{rsyslogd}]
+        |-sshd---sshd---sshd---bash---bash-+-ex2---ex2
+        |                                  `-pstree
+        |-2*[systemd---(sd-pam)]
+        |-systemd-journal
+        |-systemd-logind
+        |-systemd-network
+        |-systemd-resolve
+        |-systemd-timesyn---{systemd-timesyn}
+        |-systemd-udevd
+        `-unattended-upgr---{unattended-upgr}
+systemd-+-accounts-daemon---2*[{accounts-daemon}]
+        |-2*[agetty]
+        |-atd
+        |-cron
+        |-dbus-daemon
+        |-f2b/server---10*[{f2b/server}]
+        |-irqbalance---{irqbalance}
+        |-2*[iscsid]
+        |-linkdir---7*[{linkdir}]
+        |-lua5.2
+        |-master-+-pickup
+        |        `-qmgr
+        |-networkd-dispat
+        |-nginx---2*[nginx]
+        |-postgres---7*[postgres]
+        |-python3
+        |-rpcbind
+        |-rsyslogd---3*[{rsyslogd}]
+        |-sshd---sshd---sshd---bash---bash-+-ex2---ex2
+        |                                  `-pstree
+        |-2*[systemd---(sd-pam)]
+        |-systemd-journal
+        |-systemd-logind
+        |-systemd-network
+        |-systemd-resolve
+        |-systemd-timesyn---{systemd-timesyn}
+        |-systemd-udevd
+        `-unattended-upgr---{unattended-upgr}
+systemd-+-accounts-daemon---2*[{accounts-daemon}]
+        |-2*[agetty]
+        |-atd
+        |-cron
+        |-dbus-daemon
+        |-f2b/server---10*[{f2b/server}]
+        |-irqbalance---{irqbalance}
+        |-2*[iscsid]
+        |-linkdir---7*[{linkdir}]
+        |-lua5.2
+        |-master-+-pickup
+        |        `-qmgr
+        |-networkd-dispat
+        |-nginx---2*[nginx]
+        |-postgres---7*[postgres]
+        |-python3
+        |-rpcbind
+        |-rsyslogd---3*[{rsyslogd}]
+        |-sshd---sshd---sshd---bash---bash-+-ex2-+-ex2---ex2
+        |                                  |     `-ex2
+        |                                  `-pstree
+        |-2*[systemd---(sd-pam)]
+        |-systemd-journal
+        |-systemd-logind
+        |-systemd-network
+        |-systemd-resolve
+        |-systemd-timesyn---{systemd-timesyn}
+        |-systemd-udevd
+        `-unattended-upgr---{unattended-upgr}
+systemd-+-accounts-daemon---2*[{accounts-daemon}]
+        |-2*[agetty]
+        |-atd
+        |-cron
+        |-dbus-daemon
+        |-f2b/server---10*[{f2b/server}]
+        |-irqbalance---{irqbalance}
+        |-2*[iscsid]
+        |-linkdir---7*[{linkdir}]
+        |-lua5.2
+        |-master-+-pickup
+        |        `-qmgr
+        |-networkd-dispat
+        |-nginx---2*[nginx]
+        |-postgres---7*[postgres]
+        |-python3
+        |-rpcbind
+        |-rsyslogd---3*[{rsyslogd}]
+        |-sshd---sshd---sshd---bash---bash-+-ex2-+-ex2---ex2
+        |                                  |     `-ex2
+        |                                  `-pstree
+        |-2*[systemd---(sd-pam)]
+        |-systemd-journal
+        |-systemd-logind
+        |-systemd-network
+        |-systemd-resolve
+        |-systemd-timesyn---{systemd-timesyn}
+        |-systemd-udevd
+        `-unattended-upgr---{unattended-upgr}
+systemd-+-accounts-daemon---2*[{accounts-daemon}]
+        |-2*[agetty]
+        |-atd
+        |-cron
+        |-dbus-daemon
+        |-f2b/server---10*[{f2b/server}]
+        |-irqbalance---{irqbalance}
+        |-2*[iscsid]
+        |-linkdir---7*[{linkdir}]
+        |-lua5.2
+        |-master-+-pickup
+        |        `-qmgr
+        |-networkd-dispat
+        |-nginx---2*[nginx]
+        |-postgres---7*[postgres]
+        |-python3
+        |-rpcbind
+        |-rsyslogd---3*[{rsyslogd}]
+        |-sshd---sshd---sshd---bash---bash-+-ex2-+-ex2-+-ex2---ex2
+        |                                  |     |     `-ex2
+        |                                  |     |-ex2---ex2
+        |                                  |     `-ex2
+        |                                  `-pstree
+        |-2*[systemd---(sd-pam)]
+        |-systemd-journal
+        |-systemd-logind
+        |-systemd-network
+        |-systemd-resolve
+        |-systemd-timesyn---{systemd-timesyn}
+        |-systemd-udevd
+        `-unattended-upgr---{unattended-upgr}
+
+
+
+Explanation: 
+	I ran bash script to use pstree once in 3 seconds. This shows that process tree is growing 
