@@ -1,0 +1,24 @@
+Hello from parent [134744 - 1]
+Hello from child [0 - 1]
+Hello from parent [134746 - 1]
+Hello from child [0 - 1]
+Hello from parent [134748 - 1]
+Hello from child [0 - 1]
+Hello from parent [134750 - 1]
+Hello from child [0 - 1]
+Hello from child [0 - 1]
+Hello from parent [134752 - 1]
+Hello from parent [134754 - 1]
+Hello from child [0 - 1]
+Hello from parent [134756 - 1]
+Hello from child [0 - 1]
+Hello from parent [134758 - 1]
+Hello from child [0 - 1]
+Hello from parent [134760 - 1]
+Hello from child [0 - 1]
+Hello from parent [134762 - 1]
+Hello from child [0 - 1]
+
+
+Explanation:
+	Parent 134752 finished its execution after his child because of limited number of available cpu's
