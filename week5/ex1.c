@@ -21,10 +21,7 @@ int main()
 	for (int i = 0; i < N; i++) {
 		printf("Creating a process %d\n", i);
 	    pthread_create(&thread_id, NULL, myThreadFun, NULL);	
-
 	}
-   	    pthread_join(thread_id, NULL);
- 
    printf("Finish\n");
     exit(0);
 }
