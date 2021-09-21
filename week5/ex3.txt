@@ -1,0 +1,82 @@
+In different situations we can see some deadlock situations.
+
+Some examples of me running my program (ex3.c):
+
+1)
+
+Start program
+Creating processes
+producer starts
+consumer starts
+producer starts to sleep
+consumer starts to sleep
+
+
+/*here is deadlock*/
+
+2)
+
+Start program
+Creating processes
+consumer starts
+consumer starts to sleep
+producer starts
+producer starts to sleep
+consumer starts to sleep
+producer starts to sleep
+consumer starts to sleep
+producer starts to sleep
+consumer starts to sleep
+producer starts to sleep
+consumer starts to sleep
+producer starts to sleep
+consumer starts to sleep
+producer starts to sleep
+consumer starts to sleep
+producer starts to sleep
+consumer starts to sleep
+producer starts to sleep
+consumer starts to sleep
+producer starts to sleep
+consumer starts to sleep
+producer finishes
+
+/*and then deadlock*/
+
+3)
+
+Start program
+Creating processes
+consumer starts
+consumer starts to sleep
+producer starts
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+consumer starts to sleep
+producer starts to sleep
+consumer starts to sleep
+
+
+/*and then deadlock*/
+
+
+These deadlocks appears because of uncontrolled usage of conditions variables and the buffer.
