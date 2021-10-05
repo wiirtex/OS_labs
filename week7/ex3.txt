@@ -1,0 +1,4 @@
+Enter original array size:5
+100 100 100 100 100 
+Enter new array size:10
+100 100 100 100 100 0 0 0 0 0 
