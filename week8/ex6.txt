@@ -1,0 +1,2 @@
+We can have 2^16 virtual addresses. Pages are 8KB size, so we need a offset part of the address to be 13 bits. 8KB = 2^13B.
+So we have only 3 bits for page number => we can have 8 pages. So answer is 8 entries.

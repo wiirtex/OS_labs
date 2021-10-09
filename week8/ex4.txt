@@ -1,0 +1,31 @@
+
+Running
+Memory usage: 11316
+
+Running
+Memory usage: 21708
+
+Running
+Memory usage: 32004
+
+Running
+Memory usage: 42300
+
+Running
+Memory usage: 52596
+
+Running
+Memory usage: 62892
+
+Running
+Memory usage: 72924
+
+Running
+Memory usage: 83220
+
+Running
+Memory usage: 93516
+
+Running
+Memory usage: 103812
+program finished

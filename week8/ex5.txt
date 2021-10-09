@@ -1,0 +1,5 @@
+Virtual and Physical memory are usually different.
+Physical refers to hardware addresses. Like numbers near the bookshelf, where we can store books.
+Virtual memory refers to the virtual memory, like a dns. Process ask for the information in that concrete shelf,
+but don't really know, where this shelf is placed. Virtual address is translated to the physical adress and gives 
+to the process access to the shelf.
