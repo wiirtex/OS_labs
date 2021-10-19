@@ -1,0 +1,1 @@
+If we increase the number of pageframes, the number of hits is increasing
