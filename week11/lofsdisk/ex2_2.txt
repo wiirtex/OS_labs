@@ -1,0 +1,13 @@
+c.txt
+ex2_2.txt
+lib
+ex2.c
+~home
+usr
+a.txt
+ex2_1.txt
+b.txt
+bin
+ex2
+..
+.
