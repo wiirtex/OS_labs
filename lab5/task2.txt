@@ -1,0 +1,47 @@
+create table groups (
+  groupId integer not null,
+  primary key(groupId)
+);
+
+create table company (
+  companyId integer not null,
+  primary key(companyId),
+);
+
+create table structure (
+  childCompany integer,
+  parentCompany integer,
+  foreign key (childCompany) references company(companyId),
+  foreign key (parentCompany) references company(companyId)
+);
+
+create table plant (
+  plantId integer not null,
+  primary key (plantId)
+);
+
+create table item (
+  itemId integer not null,
+  primary key (itemId)
+);
+
+create table hasCG (
+  cId integer,
+  gId integer,
+  foreign key (cId) references company (companyId),
+  foreign key (gId) references groups (groupId)
+);
+
+create table hasCP (
+  cId integer,
+  pId integer,
+  foreign key (cId) references company (companyId),
+  foreign key (pId) references plant (plantId)
+);
+
+create table produces (
+  iId integer,
+  pId integer,
+  foreign key (iId) references item (itemId),
+  foreign key (pId) references plant (plantId)
+);

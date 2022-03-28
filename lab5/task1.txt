@@ -1,0 +1,58 @@
+
+create table manufacturers (
+  manufacturerId integer not null auto_increment,
+  primary key(manufacturerId),
+  phoneNumber text
+);
+create table customers (
+  clientId integer not null auto_increment,
+  primary key(clientId),
+  balance float,
+  creditLimit float,
+  discount float,
+  houseNumber int,
+  street text,
+  district text,
+  city text
+);
+
+create table orders(
+  orderId integer not null auto_increment,
+  primary key(orderId),
+  orderDate date,
+  houseNumber int,
+  street text,
+  district text,
+  city text
+);
+
+create table items (
+  itemId integer not null auto_increment,
+  primary key (itemId),
+  description text
+);
+
+create table placeA (
+  orderId integer,
+  foreign key (orderId) references orders(orderId),
+  customerId integer,
+  foreign key (customerId) references customers(clientId),
+  quantity integer
+);
+
+create table include (
+  orderId integer,
+  foreign key (orderId) references orders(orderId),
+  itemId integer,
+  foreign key (itemId) references items(itemId),
+  quantity integer
+);
+
+create table produce (
+  itemId integer,
+  foreign key (itemId) references items(itemId),
+  manufacturerId integer,
+  foreign key (manufacturerId) references manufacturers(manufacturerId),
+  quantity integer
+);
+
