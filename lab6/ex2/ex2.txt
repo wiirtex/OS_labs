@@ -1,0 +1,31 @@
+--1
+
+SELECT *
+FROM author JOIN book ON author.author_id = book.editor;
+
+author_id|first_name|last_name|book_id|book_title|month_  |year_|editor|
+---------+----------+---------+-------+----------+--------+-----+------+
+        8|Moshe     |Vardi    |      1|CACM      |April   | 1960|     8|
+        8|Moshe     |Vardi    |      2|CACM      |July    | 1974|     8|
+        2|Dennis    |Ritchie  |      3|BTS       |July    | 1948|     2|
+        7|Perry     |White    |      4|MLS       |November| 1936|     7|
+        9|Roy       |Batty    |      7|AAAI      |July    | 2012|     9|
+        9|Roy       |Batty    |      8|NIPS      |July    | 2012|     9|
+
+
+
+--3
+
+SELECT author_id
+FROM author
+EXCEPT
+SELECT editor
+FROM book;
+
+author_id|
+---------+
+        4|
+        6|
+        3|
+        5|
+        1|
