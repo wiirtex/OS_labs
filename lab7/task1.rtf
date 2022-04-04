@@ -1,0 +1,58 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'971nf\
+\
+create table items (\
+  itemId int,\
+  itemName int,\
+  price int,\
+  orderId int,\
+  datetime text,\
+  customerId int ,\
+  customerName text ,\
+  city text\
+  );\
+\
+\'972 and 3nf\
+\
+create table orderItems (\
+  cID int,\
+  iId int,\
+  primary key(cId, iId),\
+  quant int\
+);\
+create table customers (\
+  cId int primary key ,\
+  cName text,\
+  city text\
+);\
+create table orders (\
+  oId int primary key ,\
+  datetime text,\
+  cId int\
+);\
+create table items (\
+  iId int primary key ,\
+  iName text,\
+  price int\
+);\
+\
+\
+\'971 \
+\
+select oId, SUM(quant), SUM(i.price * quant) as total_sum from orderItems, items i where orderItems.iId = i.iId group by oId;\
+\
+\'972 \
+\
+select distinct customers.cId, sum(orderItems.quant * items.price) as spent\
+from customers, orderItems, orders, items\
+where orderItems.oId = orders.oId \
+   and orders.cId = customers.cId\
+   and orderItems.iId = items.iId\
+group by customers.cId\
+order by spent desc limit 1;}
